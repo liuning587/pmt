@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commandList>
+	<command name="取消升级">
+		<class>CancelUpdateFileCommand</class>
+		<isUse>true</isUse>
+	</command>
+	<command name="硬件区初始化">
+		<class>HardwareInitCommand</class>
+		<isUse>true</isUse>
+	</command>
+	<command name="数据区初始化">
+		<class>DataInitCommand</class>
+		<isUse>true</isUse>
+	</command>
+	<command name="读取终端时间">
+		<class>ReadTerminalTimeCommand</class>
+		<isUse>true</isUse>
+	</command>
+	<command name="延时60秒">
+		<class>DelayCommand</class>
+		<isUse>true</isUse>
+		<attr>
+			<key name="delayTime">60</key>
+		</attr>
+	</command>
+
+<command name="延时120秒">
+	<class>DelayCommand</class>
+	<isUse>true</isUse>
+	<attr>
+		<key name="delayTime">120</key>
+		</attr>
+</command>
+
+
+<command name="终端参数下发">
+	<class>TerminalParameterWriteCommand</class>
+	<isUse>true</isUse>
+	<attr>
+	</attr>
+</command>
+
+<command name="停电数据采集配置参数下发F97">
+	<class>PowerDownEventDataSetCommand</class>
+	<isUse>true</isUse>
+	<attr>
+	</attr>
+</command>
+
+<command name="重庆通道注册">
+	<class>CQRegisterCommand</class>
+	<isUse>true</isUse>
+	<attr>
+	</attr>
+</command>
+
+<command name="重庆完成升级">
+	<class>CQFinishCommand</class>
+	<isUse>true</isUse>
+	<attr>
+	</attr>
+</command>
+
+<command name="延时30秒">
+	<class>DelayCommand</class>
+	<isUse>true</isUse><attr>
+		<key name="delayTime">30</key>
+		</attr>
+		</command>
+
+
+				<command name="延时10秒">
+					<class>DelayCommand</class><isUse>true</isUse>
+					<attr><key name="delayTime">10</key></attr>
+					</command>
+						
+						<command name="端口切换apn"><class>PortShiftCommand</class>
+						<isUse>true</isUse><attr><key name="isNotChangeAPN">false</key>
+						<key name="mainPort">0</key><key name="mainIP">0.0.0.0</key>
+						<key name="isSetMainBySub">false</key>
+						<key name="subIP">192.168.0.2</key>
+						<key name="subPort">8603</key><key name="APN">cmnet</key>
+						</attr></command><command name="备用端口8603">
+						<class>PortShiftCommand</class><isUse>true</isUse>
+						<attr><key name="isNotChangeAPN">true</key>
+						<key name="mainPort">0</key><key name="mainIP">0.0.0.0</key>
+						<key name="isSetMainBySub">false</key>
+						<key name="subIP">192.168.0.2</key>
+						<key name="subPort">8603</key><key name="APN" /></attr>
+						</command><command name="端口切换9000"><class>PortShiftCommand</class><isUse>true</isUse><attr><key name="isNotChangeAPN">true</key><key name="mainPort">9011</key><key name="mainIP">192.168.0.20</key><key name="isSetMainBySub">false</key><key name="subIP">192.168.0.2</key><key name="subPort">9011</key><key name="APN" /></attr></command><command name="终端参数读取"><class>TerminalParameterReadCommand</class><isUse>true</isUse><attr><key name="queryNumber">5</key><key name="portShift">1</key></attr></command><command name="停上电参数F98"><class>CustomMessageCommand</class><isUse>true</isUse><attr><key name="dataBody">01 00 E0 10 05 00 3C 00 20 13 60 17 03</key><key name="Fn">98</key><key name="AFN">04</key><key name="isUsePw">true</key></attr></command><command name="应用文件升级"><class>UpdateFileCommand</class><isUse>true</isUse><attr><key name="rebootWaitTime">5</key><key name="filePath">D:\eclipse8\appfile\CQ01\CQ01.out</key><key name="segmentLength">1000</key><key name="version">8002</key><key name="isReboot">true</key><key name="fileType">0</key><key name="isCompressed">false</key></attr></command><command name="05文件升级"><class>UpdateFileCommand</class><isUse>true</isUse><attr><key name="rebootWaitTime">5</key><key name="filePath">D:\eclipse8\appfile\app.out</key><key name="segmentLength">488</key><key name="version">CH01</key><key name="isReboot">true</key><key name="fileType">0</key><key name="isCompressed">true</key></attr></command><command name="应用版本查询"><class>QueryVersionCommand</class><isUse>true</isUse><attr><key name="versionType">应用版本</key><key name="useDate">false</key><key name="inExecute" /><key name="dateTo" /><key name="versionList" /><key name="dateFrom" /><key name="useList">false</key><key name="outExecute" /></attr></command><command name="27传文件"><class>GBFileTransferCommand</class><isUse>true</isUse><attr><key name="rebootWaitTime">0</key><key name="filePath">C:\Users\PETER\Desktop\27sc\app</key><key name="segmentLength">971</key><key name="version">00</key><key name="isReboot">false</key><key name="fileType">00</key><key name="isCompressed">false</key></attr></command><command name="28传文件"><class>GBFileTransferCommand</class><isUse>true</isUse><attr><key name="rebootWaitTime">0</key><key name="filePath">C:\Users\PETER\Desktop\28sc\app</key><key name="segmentLength">971</key><key name="version">00</key><key name="isReboot">false</key><key name="fileType">00</key><key name="isCompressed">false</key></attr></command><command name="端口切换"><class>PortShiftCommand</class><isUse>true</isUse><attr><key name="mainPort">20074</key><key name="mainIP">60.190.23.28</key><key name="isSetMainBySub">false</key><key name="APN">cmnet</key><key name="subPort">8601</key><key name="subIP">60.190.23.26</key><key name="isNotChangeAPN">false</key></attr></command></commandList>

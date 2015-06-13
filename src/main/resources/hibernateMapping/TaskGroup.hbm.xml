@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.sx.mmt.internal.task">
+    <class name="TaskGroup" table="TaskGroup">
+		<id name="taskTag">
+            <generator class="assigned" />
+		</id>
+		<property name="name"></property>
+		<many-to-one name="parent" column="parentTag" class="TaskGroup" cascade="save-update">
+		</many-to-one>
+		<set name="children" cascade="save-update" inverse="true" lazy="false">
+			<key column="parentTag"/>
+			<one-to-many class="TaskGroup"/>
+		</set>
+    </class>
+</hibernate-mapping>

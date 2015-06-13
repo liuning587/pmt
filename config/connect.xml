@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectList>
+			<connect name="主站模式_吉林接口"><class>
+			com.sx.mmt.internal.connection.stationModel.cqdwSocket.CQFrontConnectionManager
+		</class><isUse>false</isUse><attr><key name="frontPort">30005</key><key name="password">hncj123</key><key name="channelNo">410000000721556</key><key name="frontAddress">172.16.10.70</key><key name="userName">hncj</key></attr></connect>
+		<connect name="主站模式_江苏ATCT"><class>
+			com.sx.mmt.internal.connection.stationModel.AtctSocket.AtctConnectionManager
+		</class><isUse>false</isUse><attr><key name="frontPort">9000</key><key name="frontAddress">127.0.0.1</key></attr></connect>
+		<connect name="主站模式_山东地纬"><class>
+			com.sx.mmt.internal.connection.stationModel.sddwWebservice.SDDWConnectionManager
+		</class><isUse>false</isUse><attr><key name="wsdl">http://localhost:8080/axis2/services/service?wsdl</key></attr></connect><connect name="主站模式_重庆地纬"><class>
+			com.sx.mmt.internal.connection.stationModel.cqdwWebservice.CQDWConnectionManager
+		</class><isUse>false</isUse><attr><key name="wsdl">http://localhost:8085/axis2/services/service?wsdl</key><key name="channelNo">504300000422</key></attr></connect><connect name="前置机模式"><class>
+			com.sx.mmt.internal.connection.fepModel.TerminalConnectionManager
+		</class><isUse>false</isUse><attr><key name="autoCreateTask">true</key><key name="autoDetermineProtocol">false</key><key name="listenerPort">8415</key><key name="createTaskType">w</key></attr></connect><connect name="主站模式_透明转发"><class>
+			com.sx.mmt.internal.connection.stationModel.transparent.FrontConnectionManager
+		</class><isUse>true</isUse><attr><key name="frontAddress">60.190.23.28</key><key name="frontPort">20074</key></attr></connect></connectList>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="com.sx.mmt.internal.task">
+    <class name="TaskImpl" table="Task">
+		<id name="terminalAddress">
+            <generator class="assigned" />
+		</id>
+		<property name="taskName"></property>
+		<property name="taskStatus"></property>
+		<property name="isOnline"></property>
+		<property name="createTime"></property>
+		<property name="actionNow"></property>
+		<property name="terminalReturn"></property>
+		<property name="taskGroupTag"></property>
+		<property name="nextActionTime"></property>
+		<property name="counter"></property>
+		<property name="pfc"></property>
+		<property name="currentStepIndex"></property>
+		<property name="stepStatus"></property>
+    </class>
+</hibernate-mapping>
